@@ -6,6 +6,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
 import org.firstinspires.ftc.teamcode.drive.SampleMecanumDriveBase;
 import org.firstinspires.ftc.teamcode.drive.SampleMecanumDriveREV;
+import org.firstinspires.ftc.teamcode.drive.SampleTankDriveBase;
+import org.firstinspires.ftc.teamcode.drive.SampleTankDriveREVOptimized;
 
 /*
  * This is a simple routine to test translational drive capabilities. If this is *consistently*
@@ -15,10 +17,10 @@ import org.firstinspires.ftc.teamcode.drive.SampleMecanumDriveREV;
 public class StraightTest extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
-        SampleMecanumDriveBase drive = new SampleMecanumDriveREV(hardwareMap);
+        SampleTankDriveBase drive = new SampleTankDriveREVOptimized(hardwareMap);
 
         Trajectory trajectory = drive.trajectoryBuilder()
-                .forward(60)
+                .forward(6000)
                 .build();
 
         waitForStart();
